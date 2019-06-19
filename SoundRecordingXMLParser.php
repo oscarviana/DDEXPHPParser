@@ -372,7 +372,7 @@ public function InsertReleaseList($ReleaseListData,$srno){
 	$Year = !empty($AlbumDetails['Year'])? $this->real_escape_string($AlbumDetails['Year']):null;
 	$Genre = !empty($AlbumDetails['Genre'][0]['val'])? $this->real_escape_string($AlbumDetails['Genre'][0]['val']):null;
 	//		$release_type = !empty($AlbumDetails[''][0]['val'])? $this->real_escape_string($AlbumDetails['Genre'][0]['val']):null;
-	$catalog_number = !empty($AlbumDetails['catalognumber'][0]['val'])? $this->real_escape_string($AlbumDetails['Genre'][0]['val']):null;
+	$catalog_number = !empty($AlbumDetails['CatalogNumber'])? $this->real_escape_string($AlbumDetails['CatalogNumber']):null;
 
 	$select = "select ICPN  from sony_albumlist  where ICPN = '$ICPN' and catalog_number='$catalog_number'";
 	//echo "select ICPN  from sony_albumlist  where ICPN = '$ICPN' and catalog_number='$catalog_number' \n";
